@@ -1,0 +1,92 @@
+L = {anbncn | n >= 1 } w*
+un lenguaje que tiene la misma cantidad de a’s, b’s y c’s
+
+aabbcc
+aSc
+a(aBc)c
+a(a(bB)c)c
+a(a(bb)c)c
+
+aaabbbccc
+aSc
+a(aBc)c
+a(a(bB)c)c
+a(a(a(B)c)c)c
+a(a(a(bbB)c)c)c
+a(a(a(bbb)c)c)c
+
+
+Dada la siguiente gramática dependiente del contexto:
+
+S -> aSb
+S -> X
+X -> bXc
+X -> Y
+Y -> cYd
+Y -> ε
+Determine si las siguientes cadenas pertenecen al lenguaje generado por esta gramática:
+
+abcd
+
+aSb
+aXb
+abXc
+ab(Y)c
+ab(cYd)c
+abcdc -------No cumple
+
+
+
+aabbcc
+
+aSb
+a(aSb)b
+a(aXb)b
+a(a(bXc)b)b
+aab(Y)cbb
+aab(cYd)cbb
+aabc(cd)cbb
+aabbccdcbb ----No cumple
+
+
+
+aaabbbcccddd
+cYd
+cbXcd
+cbaSbcd
+cbabXcbcd
+cbabcYdcbcd
+cbabcdcbcd ----No cumple intente de diferentes maneras
+
+
+
+
+
+
+Ejercicio 2
+
+Lenguaje de cadenas de la forma a^n b^n
+aabb
+aaaaaabbbbbb
+aaabbb
+ab
+
+El conjunto de cadenas  {0^n 1^n | n ≥ 1},
+000111 
+01
+0000011111
+00000011111
+0011
+
+
+Conjunto de todas las cadenas formadas por uno o más ceros seguidos del mismo número de unos
+0^n 1^n
+seria lo mismo que arriba porque es 0 | 1 a la n
+
+
+Lenguaje que siempre forman un par de paréntesis
+L = { ( ) = () } 
+
+
+
+
